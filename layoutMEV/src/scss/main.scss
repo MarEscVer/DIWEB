@@ -1,4 +1,3 @@
-@import "bootstrap/scss/bootstrap";
 @import "base/_variables.scss";
 @import "components/_buttons.scss";
 @import "components/_cards.scss";
@@ -6,5 +5,5 @@
 @import "layout/_sidebar.scss";
 @import "layout/_main-content.scss";
 @import "layout/_footer.scss";
-@import "views/_catalog.scss,";
+@import "views/_catalog.scss";
 @import "views/_register.scss";
