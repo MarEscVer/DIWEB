@@ -1,0 +1,31 @@
+// Estilos para el footer
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $base-opacidad-color; // con opacidad
+  border-top: 1px solid $borde-color;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .redes-sociales {
+    flex: 1;
+    text-align: center;
+    font-size: 50px;
+  }
+
+  .informacion-tienda {
+    flex: 1;
+    margin-left: 25px;
+    text-align: left;
+  }
+
+  .links-interes {
+    flex: 1;
+    margin-right: 25px;
+    text-align: right;
+  }
+}

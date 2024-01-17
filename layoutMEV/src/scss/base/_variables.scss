@@ -1,0 +1,28 @@
+// Variables
+
+// Colores básicos
+$primary-color: #409097;
+$base-color: #ffffff;
+$contraste-color: #f0f0f0;
+$borde-color: #b3b3b3;
+$gris-color: #585858;
+$base-opacidad-color: rgba(255, 255, 255, 0.6);
+
+// Color botones
+$hover-color: #076B74;
+$active-color: #04565E;
+
+// Color registro
+$error-color: #D92F2F;
+$valid-color: #59D159;
+$validacion-color: #666666;
+
+// Sombras
+$sombras: 0 0 3px rgba(0, 0, 0, 0.2);
+
+// Media Queries
+$maxima: 1024px;
+$menor: 600px;
+$mediamenor: "(max-width: #{$menor})";
+$mediapantallasmediana: "(min-width: #{$menor}) and (max-width: #{$maxima})";
+$mediamayor: "(min-width: #{$maxima})";

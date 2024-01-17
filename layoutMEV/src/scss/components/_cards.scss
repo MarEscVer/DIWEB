@@ -1,0 +1,70 @@
+// Estilos para la tarjeta de producto
+.tarjeta-producto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $base-color;
+  border: 1px solid $borde-color;
+  padding: 10px;
+  text-align: center;
+  box-shadow: $sombras; // Sombra a las tarjetas
+
+  // En pantallas mayores a 600px pero menores a 1024px, las tarjetas de producto deben mostrarse en 2 columnas.
+  @media #{$mediapantallasmediana} {
+    width: 40%;
+  }
+
+  // En pantallas mayores a 1024px, las tarjetas de producto deben mostrarse en 3 o más columnas, dependiendo del espacio disponible.
+  @media #{$mediamayor} {
+    width: 22%;
+  }
+
+  div {
+    width: 100%;
+  }
+
+  .imagen-producto {
+    width: 80%;
+    height: 20vh;
+    overflow: hidden; // Para que no se desborde el contenido del contenedor
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .nombre-producto {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .precio-producto {
+    font-weight: bold;
+
+    // Precio -> añadir el símbolo € al final del producto con una pseudoclase
+    &::after {
+      content: ' €';
+    }
+  }
+
+  // Carrito icono en el botón
+  button::before {
+    content: '\f217';
+    font-family: 'Font Awesome 5 Free';
+    margin-right: 5px;
+  }
+
+  // Pie de página de la tarjeta
+  .footer-tarjeta {
+    padding: 10px;
+    font-size: 11px;
+    color: $gris-color;
+    text-align: left;
+
+    &::after {
+      content: "Este producto está bajo licencia copyleft. Uso gratuito permitido.";
+    }
+  }
+}
