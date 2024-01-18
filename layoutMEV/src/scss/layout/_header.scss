@@ -1,96 +1,12 @@
-// Estilos para el header
-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: $base-opacidad-color; // con opacidad
-  border-bottom: 1px solid $borde-color;
-
-  // Logo + título
-  .logo {
-    align-items: center;
-    display: flex;
-
-    img {
-      width: 80px;
-      height: auto;
-
-      // En pantallas mayores a 600px pero menores a 1024px
-      @media #{$mediapantallasmediana} {
-        width: 60px;
-      }
-
-      // En pantallas menores a 600px
-      @media #{$mediamenor} {
-        width: 40px;
-      }
-    }
-
-    h1 {
-      color: $primary-color;
-      text-align: left;
-    }
-  }
-
-  // Menú
-  .menu {
-    ul {
-      list-style: none;
-      display: flex;
-    }
-
-    li {
-      margin: 5px 20px;
-    }
-
-    div {
-      margin-right: 20px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
-
-    i {
-      font-size: 24px;
-    }
-  }
-
-  // Botones de video
-  .videoBotones {
-    ul {
-      list-style: none;
-    }
-
-    li {
-      margin: 5px;
-    }
-  }
-
-  // Iconos carrito y notificación
-  div i {
-    font-size: 24px;
-  }
-
-  .campana i {
-    transition: transform 0.2s ease-in-out;
-    color: black;
-
-    &:hover {
-      animation: shake 0.5s;
-
-      @keyframes shake {
-        0%, 100% {
-          transform: translateX(0);
-        }
-        25%, 75% {
-          transform: translateX(-5px);
-        }
-        50% {
-          transform: translateX(5px);
-        }
-      }
-    }
-  }
+.navbar{
+    border-bottom: 1px solid $borde-color;
 }
+
+// Centrar la lista de enlaces
+.navbar-nav {
+    flex: 1; // Hace que la lista ocupe todo el espacio disponible
+    justify-content: center; // Centra los elementos horizontalmente
+    text-align: center;
+}
+  
+  

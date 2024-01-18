@@ -7,3 +7,6 @@
 @import "layout/_footer.scss";
 @import "views/_catalog.scss";
 @import "views/_register.scss";
+// Import all of Bootstrap's
+@import "bootstrap/scss/bootstrap";
+@import '~bootstrap-icons/font/bootstrap-icons.css';

@@ -5,249 +5,196 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="https://use.fontawesome.com/releases/v5.12.0/js/all.js" data-auto-replace-svg="nest"></script>
-    <script src="https://kit.fontawesome.com/6c0d70b43d.js" crossorigin="anonymous"></script>
     <title>Tienda de Productos</title>
-    <script defer src="./js/catalogo.js"></script>
+    <script defer src="./js/main.js"></script>
 </head>
 
 <body>
-    <div class="video-wrapper">
-        <video playsinline autoplay muted loop id="videoPlay">
-            <source src="./video/video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-        <div class="contenido">
-            <div id="catalogo">
-                <header>
-                    <div class="logo">
-                        <img src="./img/POMPASNCONTORNO.svg" alt="BLOOM tienda de jabones naturales">
-                        <h1>BLOOM</h1>
-                    </div>
-
-                    <nav class="menu">
-                        <ul>
-                            <div><a href="#">
-                                    <i class="fa-solid fa-house"></i>
-                                    <li>Inicio</li>
-                                </a></div>
-                            <div><a href="#">
-                                    <i class="fa-solid fa-bag-shopping"></i>
-                                    <li>Catálogo</li>
-                                </a></div>
-                            <div><a href="#">
-                                    <i class="fa-solid fa-user-group"></i>
-                                    <li>Quienes somos</li>
-                                </a></div>
-                        </ul>
-                    </nav>
-
-                    <div class="videoBotones">
-                        <ul>
-                            <a id="boton"><i id="iconoBoton" class="fa-solid fa-pause"></i></a>
-                            <a id="cerrar"><i id="iconoCerrar" class="fa-solid fa-circle-xmark"></i></a>
-                            <li>Video</li>
-                        </ul>
-                        
-                    </div>
-                    <div>
-                        <a href="./registro.html"><i class="fa-solid fa-user-large"></i></a>
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        <span class="campana"><i class="fa-solid fa-bell"></i></span>
-                    </div>
-                </header>
-
-                <aside>
-                    <section class="categorias">
-                        <h2>Categorías</h2>
-                        <ul>
-                            <li><a href="#">Ecológicos</a></li>
-                            <li><a href="#">Pastillas</a></li>
-                            <li><a href="#">Packs ahorro</a></li>
-                            <li><a href="#">Bomba de baño </a></li>
-                        </ul>
-                    </section>
-                    <section class="filtros">
-                        <h2>Filtros</h2>
-                        <label for="precio">Precio:</label>
-                        <input type="range" id="precio" min="0" max="100">
-                    </section>
-                    <section class="ofertas">
-                        <h2>Ofertas</h2>
-                        <a href="#popup">Oferta Black Friday</a>
-                        <!--Popup-->
-                        <div id="popup">
-                            <div class="popup-content">
-                                <img src="./img/banner.png" alt="Oferta Black Friday">
-                                <a href="#cerrar">×</a>
+    <div class="contenido">
+        <div class="container">
+            <div id="catalogo" class="row">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="./img/POMPASNCONTORNO.svg" alt="BLOOM tienda de jabones naturales" width="30" height="24" class="d-inline-block align-text-top">
+                            BLOOM
+                        </a>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-house"></i><br>Inicio</a>
+                            <a class="nav-link" href="registro.html"><i class="bi bi-book"></i><br>Catálogo</a>
+                            <a class="nav-link" href="#"><i class="bi bi-people"></i><br>Quines somos</a>
                             </div>
                         </div>
-                    </section>
-                </aside>
+                        <div class="campana">
+                            <a href="registro.html"><i class="bi bi-person"></i></i></a>
+                            <i class="bi bi-cart"></i>
+                            <i class="bi bi-bell"></i>
+                        </div>
+                    </div>
+                  </nav>
+                
+                    <aside class="col-md-3">
+                        <section class="categorias">
+                            <h2>Categorías</h2>
+                            <ul>
+                                <li><a href="#">Ecológicos</a></li>
+                                <li><a href="#">Pastillas</a></li>
+                                <li><a href="#">Packs ahorro</a></li>
+                                <li><a href="#">Bomba de baño </a></li>
+                            </ul>
+                        </section>
+                        <section class="filtros">
+                            <h2>Filtros</h2>
+                            <label for="precio">Precio:</label>
+                            <input type="range" id="precio" min="0" max="100">
+                        </section>
+                        <section class="ofertas">
+                            <h2>Ofertas</h2>
+                            <a href="#popup">Oferta Black Friday</a>
+                            <!--Popup-->
+                            <div id="popup">
+                                <div class="popup-content">
+                                    <img src="./img/banner.png" alt="Oferta Black Friday">
+                                    <a href="#cerrar">×</a>
+                                </div>
+                            </div>
+                        </section>
+                    </aside>
 
-                <main class="contenido-principal">
-                    <div class="tarjeta-producto">
-                        <div class="imagen-producto">
-                            <img src="./img/catalogo/aceite.jpg" alt="Jabon de aceite de oliva">
+                    <main class="col-md-9">
+                        <div id="contenido-principal" class="row">
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="./img/catalogo/aceite.jpg" class="card-img-top" alt="Jabon de aceite de oliva">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Aceite de oliva</h5>
+                                        <p class="card-text">20.99€</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                    <div class="footer-tarjeta">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="./img/catalogo/laurelyaceite.jpg" class="card-img-top" alt="Jabon de laurel y aceite de oliva">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Laurel</h5>
+                                        <p class="card-text">20.99€</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                    <div class="footer-tarjeta">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="./img/catalogo/lavanda.jpg" class="card-img-top" alt="Jabón de lavanda">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Lavanda</h5>
+                                        <p class="card-text">20.99€</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                    <div class="footer-tarjeta">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="./img/catalogo/lavandarosas.jpg" class="card-img-top" alt="Jabón de rosas y lavanda">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rosas y lavanda</h5>
+                                        <p class="card-text">20.99€</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                    <div class="footer-tarjeta">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="./img/catalogo/marseille.jpg" class="card-img-top" alt="Jabón de marseille">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Marseille</h5>
+                                        <p class="card-text">20.99€</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                    <div class="footer-tarjeta">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="./img/catalogo/petalosderosas.jpg" class="card-img-top" alt="Jabon de pétalos de rosas">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pétalos de rosa</h5>
+                                        <p class="card-text">20.99€</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                    <div class="footer-tarjeta">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="./img/catalogo/rosasjazmin.jpg" class="card-img-top" alt="Jabón de rosas y jazmín">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rosas y jazmín</h5>
+                                        <p class="card-text">20.99€</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                    <div class="footer-tarjeta">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="card">
+                                    <img src="./img/catalogo/sales.jpg" class="card-img-top" alt="Jabón de sales">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sales</h5>
+                                        <p class="card-text">20.99€</p>
+                                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                                    </div>
+                                    <div class="footer-tarjeta">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="nombre-producto">Aceite de oliva</h3>
-                        </div>
-                        <div>
-                            <p class="precio-producto">20.99</p>
-                        </div>
-                        <div>
-                            <button>Agregar al carrito</button>
-                        </div>
-                        <div class="footer-tarjeta">
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto">
-                        <div class="imagen-producto">
-                            <img src="./img/catalogo/laurelyaceite.jpg" alt="Jabón de laurel y aceite de olvia">
-                        </div>
-                        <div>
-                            <h3 class="nombre-producto">Laurel</h3>
-                        </div>
-                        <div>
-                            <p class="precio-producto">19.99</p>
-                        </div>
-                        <div>
-                            <button>Agregar al carrito</button>
-                        </div>
-                        <div class="footer-tarjeta">
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto">
-                        <div class="imagen-producto">
-                            <img src="./img/catalogo/lavanda.jpg" alt="Jabón de lavanda">
-                        </div>
-                        <div>
-                            <h3 class="nombre-producto">Lavanda</h3>
-                        </div>
-                        <div>
-                            <p class="precio-producto">15.99</p>
-                        </div>
-                        <div>
-                            <button>Agregar al carrito</button>
-                        </div>
-                        <div class="footer-tarjeta">
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto">
-                        <div class="imagen-producto">
-                            <img src="./img/catalogo/lavandarosas.jpg" alt="Jabón de rosas y lavanda">
-                        </div>
-                        <div>
-                            <h3 class="nombre-producto">Rosas y lavanda</h3>
-                        </div>
-                        <div>
-                            <p class="precio-producto">19.99</p>
-                        </div>
-                        <div>
-                            <button>Agregar al carrito</button>
-                        </div>
-                        <div class="footer-tarjeta">
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto">
-                        <div class="imagen-producto">
-                            <img src="./img/catalogo/marseille.jpg" alt="Jabón de marseille">
-                        </div>
-                        <div>
-                            <h3 class="nombre-producto">Marseille</h3>
-                        </div>
-                        <div>
-                            <p class="precio-producto">16.99</p>
-                        </div>
-                        <div>
-                            <button>Agregar al carrito</button>
-                        </div>
-                        <div class="footer-tarjeta">
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto">
-                        <div class="imagen-producto">
-                            <img src="./img/catalogo/petalosderosas.jpg" alt="Jabon de pétalos de rosas">
-                        </div>
-                        <div>
-                            <h3 class="nombre-producto">Pétalos de rosa</h3>
-                        </div>
-                        <div>
-                            <p class="precio-producto">9.99</p>
-                        </div>
-                        <div>
-                            <button>Agregar al carrito</button>
-                        </div>
-                        <div class="footer-tarjeta">
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto">
-                        <div class="imagen-producto">
-                            <img src="./img/catalogo/rosasjazmin.jpg" alt="Jabón de rosas y jazmín">
-                        </div>
-                        <div>
-                            <h3 class="nombre-producto">Rosas y jazmín</h3>
-                        </div>
-                        <div>
-                            <p class="precio-producto">25.99</p>
-                        </div>
-                        <div>
-                            <button>Agregar al carrito</button>
-                        </div>
-                        <div class="footer-tarjeta">
-                        </div>
-                    </div>
-                    <div class="tarjeta-producto">
-                        <div class="imagen-producto">
-                            <img src="./img/catalogo/sales.jpg" alt="Jabón de sales">
-                        </div>
-                        <div>
-                            <h3 class="nombre-producto">Sales</h3>
-                        </div>
-                        <div>
-                            <p class="precio-producto">9.99</p>
-                        </div>
-                        <div>
-                            <button>Agregar al carrito</button>
-                        </div>
-                        <div class="footer-tarjeta">
-                        </div>
-                    </div>
-                </main>
+                    </main>
 
-                <footer>
-                    <section class="informacion-tienda">
-                        <h3>TIENDA</h3>
-                        <ul>
-                            <li><a href="#">Nuestro compromiso</a></li>
-                            <li><a href="#">Nuestras políticas</a></li>
-                            <li><a href="#">Contáctanos</a></li>
-                            <li><a href="#">Cambios y devoluciones</a></li>
-                            <li><a href="#">Aviso legal</a></li>
-                        </ul>
+                    <footer class="col-12">
+                        <section class="informacion-tienda">
+                            <h3>TIENDA</h3>
+                            <ul>
+                                <li><a href="#">Nuestro compromiso</a></li>
+                                <li><a href="#">Nuestras políticas</a></li>
+                                <li><a href="#">Contáctanos</a></li>
+                                <li><a href="#">Cambios y devoluciones</a></li>
+                                <li><a href="#">Aviso legal</a></li>
+                            </ul>
 
-                    </section>
-                    <section class="redes-sociales">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    </section>
-                    <section class="links-interes">
-                        <h3>Links de Interés</h3>
-                        <ul>
-                            <li><a href="#">Términos y Condiciones</a></li>
-                            <li><a href="#">Política de Privacidad</a></li>
-                            <li><a href="https://pixabay.com/es/service/license-summary/"><i
-                                        class="fa-brands fa-creative-commons-sa"></i>Términos de contenido
-                                    multimedia</a>
-                            </li>
-                        </ul>
-                    </section>
-                </footer>
+                        </section>
+                        <section class="redes-sociales">
+                            <a href="#"><i class="bi bi-instagram"></i></a>
+                            <a href="#"><i class="bi bi-twitter-x"></i></a>
+                            <a href="#"><i class="bi bi-facebook"></i></a>
+                        </section>
+                        <section class="links-interes">
+                            <h3>Links de Interés</h3>
+                            <ul>
+                                <li><a href="#">Términos y Condiciones</a></li>
+                                <li><a href="#">Política de Privacidad</a></li>
+                                <li><a href="https://pixabay.com/es/service/license-summary/">
+                                        <i class="bi bi-cc-circle-fill"></i>
+                                        Términos de contenido multimedia
+                                    </a>
+                                </li>
+                            </ul>
+                        </section>
+                    </footer>
+                </div>
             </div>
-
         </div>
     </div>
 </body>

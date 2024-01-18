@@ -20,8 +20,9 @@ module.exports = {
     hot: true
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' }),
-    new miniCssExtractPlugin(),
+    new HtmlWebpackPlugin({ template: './src/index.html', filename: 'index.html'}),
+    new HtmlWebpackPlugin({ template: './src/registro.html', filename: 'registro.html' }),
+    new miniCssExtractPlugin({ filename: 'main.css' }),
     new CopyWebpackPlugin ({
       patterns: [
         { from: 'src/img', to: 'img' },
