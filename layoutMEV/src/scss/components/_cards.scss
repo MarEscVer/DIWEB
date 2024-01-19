@@ -9,7 +9,8 @@
 .footer-tarjeta {
   color: $gris-color;
   text-align: left;
-  margin: 15px;
+  font-size: 12px;
+  margin: 8px;
 
   &::after {
     content: "Este producto está bajo licencia copyleft. Uso gratuito permitido.";

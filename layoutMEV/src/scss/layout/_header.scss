@@ -1,5 +1,6 @@
 .navbar{
     border-bottom: 1px solid $borde-color;
+    background-color: $base-opacidad-color;
 }
 
 // Centrar la lista de enlaces
@@ -8,5 +9,23 @@
     justify-content: center; // Centra los elementos horizontalmente
     text-align: center;
 }
-  
-  
+
+//Titulo
+.navbar-brand div {
+  text-align: center;
+  color: $primary-color;
+  font-size: 35px;
+  margin-left: 10px;
+}
+
+//Ajustar imagen y titulo
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+//Estilo iconos
+i {
+  font-size: 25px;
+}

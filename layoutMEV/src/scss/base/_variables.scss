@@ -2,6 +2,8 @@
 
 // Colores básicos
 $primary-color: #409097;
+$boton-color: #a8d3d6;
+$boton-color-secondary: #88abad;
 $base-color: #ffffff;
 $contraste-color: #f0f0f0;
 $borde-color: #b3b3b3;
@@ -11,6 +13,14 @@ $base-opacidad-color: rgba(255, 255, 255, 0.6);
 // Color botones
 $hover-color: #076B74;
 $active-color: #04565E;
+
+// Sustitución colores variables Bootstrap
+$navbar-bg: $base-opacidad-color;
+$theme-colors: (
+  "primary": $boton-color,
+  "secondary": $boton-color-secondary
+);
+$carousel-transition-duration: 1s;
 
 // Color registro
 $error-color: #D92F2F;

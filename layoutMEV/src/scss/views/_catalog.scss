@@ -11,6 +11,7 @@ body {
 
     #contenido-principal {
       grid-column: span 9; // Ocupa 9 columnas (75%)
+      margin-top: 10px;
 
       @media #{$mediamenor} {
         grid-column: span 12; // Ocupa 12 columnas (100%) en pantallas pequeñas
@@ -44,10 +45,5 @@ body {
     &:hover {
       color: $hover-color;
     }
-  }
-
-  //Estilo iconos
-  i {
-    font-size: 25px;
   }
 }

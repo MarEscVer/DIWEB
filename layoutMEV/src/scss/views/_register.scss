@@ -1,51 +1,42 @@
-// Estilos para el contenedor del formulario
-form {
-  max-width: 600px; // Ancho máximo
-  margin: 0 auto; // Centra horizontalmente en el contenedor
-  background-color: $base-color; // Fondo blanco
-  padding: 20px; // Padding del formulario
-  border: 1px solid $borde-color; // Borde del formulario
-  border-radius: 5px; // Radio del borde
-  box-shadow: $sombras; // Sombra al formulario
-}
+.contenido {
+  font-family: Georgia, serif;
 
-// Estilos para las etiquetas del formulario
-label {
-  display: block; // Etiqueta elemento bloque (ocupa todo el ancho + comienza en otra línea)
-  margin-top: 15px;
-  font-weight: bold;
-}
-
-// Estilos para los campos de entrada del formulario
-input {
-  width: 95%; // Ancho del contenedor
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid $borde-color;
-  border-radius: 5px;
-
-  &::placeholder {
-    font-style: italic;
+  // Estilos para el contenedor del formulario
+  form {
+    max-width: 600px; // Ancho máximo
+    margin: 0 auto; // Centra horizontalmente en el contenedor
+    background-color: $base-color; // Fondo blanco
+    padding: 20px; // Padding del formulario
+    border: 1px solid $borde-color; // Borde del formulario
+    border-radius: 5px; // Radio del borde
+    box-shadow: $sombras; // Sombra al formulario
   }
 
-  &:focus {
-    background-color: $contraste-color; // Cuando el input está señalado por el usuario
+  // Estilos para los campos de entrada del formulario
+  input, select{
+    width: 95%; // Ancho del contenedor
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid $borde-color;
+    border-radius: 5px;
+
+    &::placeholder {
+      font-style: italic;
+    }
+
+    &:focus {
+      background-color: $contraste-color; // Cuando el input está señalado por el usuario
+    }
+
+    &:invalid {
+      border-color: $error-color;
+      box-shadow: none;
+    }
+
+    &:valid {
+      border-color: $valid-color;
+      box-shadow: none;
+    }
   }
 
-  &:invalid {
-    border-color: $error-color;
-    box-shadow: none;
-  }
-
-  &:valid {
-    border-color: $valid-color;
-    box-shadow: none;
-  }
-}
-
-// Estilos para mensajes de validación
-span {
-  color: $validacion-color;
-  font-style: italic;
-  font-size: 12px;
 }

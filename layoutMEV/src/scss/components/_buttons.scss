@@ -1,22 +1,7 @@
-// Definimos estilos básicos para el botón
-.btn, .btn-primary {
+.btn {
   width: 100%;
-  background-color: $primary-color; // Color de fondo
-  color: $base-color; // Color del texto
-  border: none; // Sin borde
-  border-radius: 4px; // Bordes redondeados
   cursor: pointer; // Cambiamos el cursor al pasar el ratón
   font-weight: bold; // Hacemos que el texto esté en negrita
   font-size: 16px; // Ajusta el tamaño de la fuente según tus preferencias
   padding: 2%; // Añadido el punto y coma
-
-  // Efectos al pasar el ratón sobre el botón
-  &:hover {
-    background-color: $hover-color; // Cambiamos el color de fondo al pasar el ratón
-  }
-
-  // Efectos al hacer clic en el botón
-  &:active {
-    background-color: $active-color; // Cambiamos el color de fondo al hacer clic
-  }
 }
