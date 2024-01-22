@@ -4,6 +4,7 @@ import '../scss/main.scss';
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap';
 
+/** 
 //no permite seleccionar fechas futuras ni fechas anteriores a una cierta edad (18 años atrás desde la fecha actual)
 // Obtén la fecha actual
 const fechaActual = new Date();
@@ -21,14 +22,9 @@ const fechaMinimaFormateada = `${anio}-${mes}-${dia}`;
 
 const fechaNacimientoInput = document.getElementById("fecha-nacimiento");
 fechaNacimientoInput.max = fechaMinimaFormateada;
+*/
 
 //Toast
-const toastTrigger = document.getElementById("liveToastBtn");
-const toastLiveExample = document.getElementById("liveToast");
-toastTrigger.addEventListener("click", () => {
-    const toast = new bootstrap.Toast(toastLiveExample);
-    toast.show();
-});
 
 //Tooltips
 var tooltips = new bootstrap.Tooltip(document.body, {
