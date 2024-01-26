@@ -1,13 +1,13 @@
-.navbar{
-    border-bottom: 1px solid $borde-color;
-    background-color: $base-opacidad-color;
+.navbar {
+  border-bottom: 1px solid $borde-color;
+  background-color: $base-opacidad-color;
 }
 
 // Centrar la lista de enlaces
 .navbar-nav {
-    flex: 1; // Hace que la lista ocupe todo el espacio disponible
-    justify-content: center; // Centra los elementos horizontalmente
-    text-align: center;
+  flex: 1; // Hace que la lista ocupe todo el espacio disponible
+  justify-content: center; // Centra los elementos horizontalmente
+  text-align: center;
 }
 
 //Titulo
@@ -28,4 +28,13 @@
 //Estilo iconos
 i {
   font-size: 25px;
+}
+
+//Icono notificaciones
+#liveToastBtn {
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-color;
+  }
 }
