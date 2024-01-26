@@ -43,7 +43,7 @@
                     </ol>
                 </nav>
 
-                <form action="procesar_registro.php" method="post" class="mt-4">
+                <form id="registroForm" action="procesar_registro.php" method="post" class="mt-4">
 
                     <!--Todos los input serán requeridos para que a nivel de estilos siempre aparecerá el estilo input:valid en aquellos campos que no estén requeridos-->
                     <div class="mb-3">
@@ -121,7 +121,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-secondary">Confirmar Cancelación</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="confirmarCancelacionButton">Confirmar Cancelación</button>
                 </div>
             </div>
         </div>

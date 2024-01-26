@@ -30,3 +30,17 @@ fechaNacimientoInput.max = fechaMinimaFormateada;
 var tooltips = new bootstrap.Tooltip(document.body, {
     selector: '[data-bs-toggle="tooltip"]'
 });
+
+//Registro --> Boton confirmar cancelacion
+document.addEventListener('DOMContentLoaded', function () {
+    const confirmarCancelacionButton = document.querySelector('#confirmarCancelacionButton');
+
+    if (confirmarCancelacionButton) {
+        confirmarCancelacionButton.addEventListener('click', function () {
+            const registroForm = document.querySelector('#registroForm');
+            if (registroForm) {
+                registroForm.reset();
+            }
+        });
+    }
+});
