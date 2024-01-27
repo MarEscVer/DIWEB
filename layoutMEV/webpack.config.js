@@ -11,22 +11,23 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
     static: path.resolve(__dirname, 'dist'),
     port: 8080,
-    hot: true
+    hot: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html', filename: 'index.html'}),
+    new HtmlWebpackPlugin({ template: './src/index.html', filename: 'index.html' }),
     new HtmlWebpackPlugin({ template: './src/registro.html', filename: 'registro.html' }),
+    new HtmlWebpackPlugin({ template: './src/estadistica.html', filename: 'estadistica.html' }),
     new MiniCssExtractPlugin({ filename: 'main.css' }),
-    new CopyWebpackPlugin ({
+    new CopyWebpackPlugin({
       patterns: [
         { from: 'src/img', to: 'img' },
       ],
-    })
+    }),
   ],
   module: {
     rules: [
@@ -39,15 +40,17 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  autoprefixer
-                ]
-              }
-            }
+                plugins: [autoprefixer],
+              },
+            },
           },
-          'sass-loader'
-        ]
-      }
-    ]
-  }
+          'sass-loader',
+        ],
+      },
+      {
+        test: require.resolve('chart.js'),
+        use: 'import-loader',
+      },
+    ],
+  },
 };
