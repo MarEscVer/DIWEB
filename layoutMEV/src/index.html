@@ -8,6 +8,25 @@
 </head>
 
 <body>
+    <!-- Modal Video -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Video -->
+                    <video autoplay muted loop id="myVideoModal">
+                        <source src="./img/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenido -->
     <div class="contenido">
         <div class="container-fluid">
             <div id="catalogo" class="row">
@@ -65,17 +84,22 @@
                         <label for="precio">Precio:</label>
                         <input type="range" id="precio" min="0" max="100">
                     </section>
+                    <!-- Sección de ofertas -->
                     <section class="ofertas">
                         <h2>Ofertas</h2>
-                        <a href="#popup">Oferta Black Friday</a>
-                        <!--Popup-->
-                        <div id="popup">
-                            <div class="popup-content">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#blackFridayModal">Oferta Black Friday</a>
+                    </section>
+                    <!-- Modal Black Friday -->
+                    <div class="modal fade" id="blackFridayModal" tabindex="-1" role="dialog"
+                        aria-labelledby="blackFridayModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <a href="#" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></a>
+                                <!-- Contenido del modal, puede contener la imagen y otros elementos -->
                                 <img src="./img/banner.png" alt="Oferta Black Friday">
-                                <a href="#cerrar">×</a>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </aside>
 
                 <!-- Contenido principal -->

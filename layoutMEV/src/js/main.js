@@ -4,6 +4,20 @@ import '../scss/main.scss';
 // Import all of Bootstrap's JS
 import * as bootstrap from 'bootstrap';
 
+//Al abrir la pagina se muestre el video
+document.addEventListener('DOMContentLoaded', function () {
+    // Verifica si ya se ha mostrado el modal en esta sesión
+    var isModalShown = sessionStorage.getItem('isModalShown');
+
+    if (!isModalShown) {
+        // Muestra el modal automáticamente al cargar la página
+        var myModal = new bootstrap.Modal(document.getElementById('videoModal'), {});
+        myModal.show();
+
+        // Marca que el modal ha sido mostrado en esta sesión
+        sessionStorage.setItem('isModalShown', 'true');
+    }
+});
 //Toast
 document.addEventListener('DOMContentLoaded', function () {
     var toastElement = document.getElementById('liveToast');
@@ -16,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 
 //Tooltips
 var tooltips = new bootstrap.Tooltip(document.body, {
@@ -36,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+//Paginacion
 
 /** 
 //no permite seleccionar fechas futuras ni fechas anteriores a una cierta edad (18 años atrás desde la fecha actual)
