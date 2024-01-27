@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         sessionStorage.setItem('isModalShown', 'true');
     }
 });
+
 //Toast
 document.addEventListener('DOMContentLoaded', function () {
     var toastElement = document.getElementById('liveToast');
@@ -49,8 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-//Paginacion
 
 /** 
 //no permite seleccionar fechas futuras ni fechas anteriores a una cierta edad (18 años atrás desde la fecha actual)
