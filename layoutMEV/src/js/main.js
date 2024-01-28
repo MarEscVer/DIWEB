@@ -1,13 +1,11 @@
-// Import our custom CSS
+// Importa nuestro CSS personalizado
 import '../scss/main.scss';
-
-// Import all of Bootstrap's JS
+// Importa todo el JS de Bootstrap
 import * as bootstrap from 'bootstrap';
-
-// Import chart.js
+// Importa chart.js
 import Chart from 'chart.js/auto';
 
-//Al abrir la pagina se muestre el video
+// Al abrir la página, muestra el video
 document.addEventListener('DOMContentLoaded', function () {
     // Verifica si ya se ha mostrado el modal en esta sesión
     var isModalShown = sessionStorage.getItem('isModalShown');
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-//Toast
+// Toast
 document.addEventListener('DOMContentLoaded', function () {
     var toastElement = document.getElementById('liveToast');
     var myToast = toastElement ? new bootstrap.Toast(toastElement) : null;
@@ -35,12 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-//Tooltips
+// Tooltips
 var tooltips = new bootstrap.Tooltip(document.body, {
     selector: '[data-bs-toggle="tooltip"]'
 });
 
-//Registro --> Boton confirmar cancelacion
+// Registro --> Botón confirmar cancelación
 document.addEventListener('DOMContentLoaded', function () {
     const confirmarCancelacionButton = document.querySelector('#confirmarCancelacionButton');
 
@@ -54,10 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Graficos
-
-//Informe
-// Tus datos y configuración de gráfico
+// Datos y configuración del gráfico de línea
 const data = {
     labels: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],
     datasets: [
@@ -99,7 +94,7 @@ const config = {
     },
 };
 
-// Datos para el Pie Chart
+// Datos y configuración del gráfico de pastel (Pie Chart)
 const pieChartData = {
     labels: ['Gel', 'Champú', 'Animales'],
     datasets: [{
@@ -108,7 +103,6 @@ const pieChartData = {
     }],
 };
 
-// Configuración del Pie Chart
 const pieChartConfig = {
     type: 'pie',
     data: pieChartData,
@@ -120,9 +114,7 @@ const pieChartConfig = {
     }
 };
 
-
-
-// Datos para el Doughnut Chart
+// Datos y configuración del gráfico de rosquilla (Doughnut Chart)
 const doughnutChartData = {
     labels: ['España', 'México', 'Argentina'],
     datasets: [{
@@ -131,7 +123,6 @@ const doughnutChartData = {
     }],
 };
 
-// Configuración del Doughnut Chart
 const doughnutChartConfig = {
     type: 'doughnut',
     data: doughnutChartData,
@@ -143,40 +134,33 @@ const doughnutChartConfig = {
     }
 };
 
-//Calcular totales
-// Calcular y mostrar el total de usuarios
-const totalUsuariosDoughnutChartElement = document.getElementById('totalUsuariosDoughnutChart');
-const totalUsuarios = doughnutChartData.datasets[0].data.reduce((total, usuarios) => total + usuarios, 0);
-totalUsuariosDoughnutChartElement.textContent = totalUsuarios;
-// Calcular y mostrar el total de ventas
-const totalVentasPieChartElement = document.getElementById('totalVentasPieChart');
-const totalVentas = pieChartData.datasets[0].data.reduce((total, venta) => total + venta, 0);
-totalVentasPieChartElement.textContent = totalVentas;
+document.addEventListener('DOMContentLoaded', function () {
+    // Verifica si estamos en la página de estadísticas
+    if (window.location.pathname.includes('estadistica.html')) {
+        // Calcular y mostrar el total de usuarios
+        const totalUsuariosDoughnutChartElement = document.getElementById('totalUsuariosDoughnutChart');
+        const doughnutChartDataset = doughnutChartData.datasets && doughnutChartData.datasets[0];
 
-//Creación de gráficos
-const myChart = new Chart(document.getElementById('myChart'), config);
-const pieChartElement = document.getElementById('pieChart');
-const pieChart = new Chart(pieChartElement, pieChartConfig);
-const doughnutChartElement = document.getElementById('doughnutChart');
-const doughnutChart = new Chart(doughnutChartElement, doughnutChartConfig);
+        if (totalUsuariosDoughnutChartElement && doughnutChartDataset) {
+            const totalUsuarios = doughnutChartDataset.data.reduce((total, usuarios) => total + usuarios, 0);
+            totalUsuariosDoughnutChartElement.textContent = totalUsuarios;
+        }
 
+        // Calcular y mostrar el total de ventas
+        const totalVentasPieChartElement = document.getElementById('totalVentasPieChart');
+        const pieChartDataset = pieChartData.datasets && pieChartData.datasets[0];
 
-/** 
-//no permite seleccionar fechas futuras ni fechas anteriores a una cierta edad (18 años atrás desde la fecha actual)
-// Obtén la fecha actual
-const fechaActual = new Date();
+        if (totalVentasPieChartElement && pieChartDataset) {
+            const totalVentas = pieChartDataset.data.reduce((total, venta) => total + venta, 0);
+            totalVentasPieChartElement.textContent = totalVentas;
+        }
 
-// Calcula la fecha mínima (hace 18 años a partir de la fecha actual)
-const fechaMinima = new Date(fechaActual);
-fechaMinima.setFullYear(fechaMinima.getFullYear() - 18);
+        // Creación de gráficos
+        const myChart = new Chart(document.getElementById('myChart'), config);
+        const pieChartElement = document.getElementById('pieChart');
+        const pieChart = new Chart(pieChartElement, pieChartConfig);
+        const doughnutChartElement = document.getElementById('doughnutChart');
+        const doughnutChart = new Chart(doughnutChartElement, doughnutChartConfig);
+    }
+});
 
-// Formatea la fecha mínima en el formato necesario para el campo de fecha
-const dia = fechaMinima.getDate().toString().padStart(2, '0');
-const mes = (fechaMinima.getMonth() + 1).toString().padStart(2, '0'); // Suma 1 porque enero es 0
-const anio = fechaMinima.getFullYear();
-
-const fechaMinimaFormateada = `${anio}-${mes}-${dia}`;
-
-const fechaNacimientoInput = document.getElementById("fecha-nacimiento");
-fechaNacimientoInput.max = fechaMinimaFormateada;
-*/
