@@ -50,13 +50,13 @@ body {
   }
 
   // Video
-  .modal {
+  .video-modal {
     background: $base-color;
     overflow: hidden;
     padding: 0;
   }
 
-  .modal-dialog {
+  .video-dialog {
     max-width: none;
     width: 100%;
     height: 100%;
@@ -66,12 +66,12 @@ body {
     justify-content: center;
   }
 
-  .modal-content {
+  .video-content {
     border: none;
     box-shadow: none;
   }
 
-  .modal-header {
+  .video-header {
     border-bottom: none;
   }
 
