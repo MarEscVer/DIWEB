@@ -41,3 +41,68 @@
   }
 
 }
+
+//MODO OSCURO
+.contenido.dark-mode {
+  background-color: $oscuro-fondo-color;
+  color: $oscuro-letra-color;
+}
+
+.contenido.dark-mode a {
+  color: $oscuro-letra-color;
+}
+
+.contenido.dark-mode .navbar {
+  background-color: $oscuro-fondo-color;
+  color: $oscuro-letra-color;
+}
+
+.contenido.dark-mode footer {
+  background-color: $oscuro-fondo-color;
+  color: $oscuro-letra-color;
+}
+
+.contenido.dark-mode .breadcrumb-item {
+  color: $oscuro-letra-color;
+}
+
+.contenido.dark-mode form {
+  background-color: $oscuro-form-color;
+  border-color: $oscuro-bordes-color;
+  box-shadow: $sombras;
+}
+
+.contenido.dark-mode input,
+.contenido.dark-mode select {
+  background-color: $oscuro-form-color;
+  color: $oscuro-letra-color;
+}
+
+.contenido.dark-mode input:focus,
+.contenido.dark-mode select:focus {
+  background-color: $oscuro-focus-selected-color; 
+}
+
+.contenido.dark-mode input:invalid,
+.contenido.dark-mode select:invalid  {
+  border-color: #FF4040;
+}
+
+.contenido.dark-mode input:valid,
+.contenido.dark-mode select:valid {
+  border-color: #79FF79;
+}
+
+/* Estilos para el modal en modo oscuro */
+.contenido.dark-mode .modal-content {
+  background-color: $oscuro-fondo-color;
+  color: $oscuro-letra-color;
+}
+
+.contenido.dark-mode .modal-header {
+  background-color: $oscuro-fondo-color;
+}
+
+.contenido.dark-mode .modal-footer {
+  background-color: $oscuro-fondo-color;
+}

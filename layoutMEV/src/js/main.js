@@ -52,6 +52,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Función para cambiar entre modo claro y oscuro
+document.addEventListener('DOMContentLoaded', function () {
+    var darkModeToggle = document.getElementById('dark-mode-toggle');
+    var body = document.body;
+    var contenido = document.querySelector('.contenido');
+
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', function (event) {
+            event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+            body.classList.toggle('dark-mode');
+            contenido.classList.toggle('dark-mode'); // Agrega o elimina la clase 'dark-mode' de .contenido
+
+            // Alterna la visibilidad de los íconos de luna y sol
+            var moonIcon = darkModeToggle.querySelector('.bi-moon-fill');
+            var sunIcon = darkModeToggle.querySelector('.bi-sun-fill');
+            moonIcon.classList.toggle('d-none');
+            sunIcon.classList.toggle('d-none');
+        });
+
+        // También puedes hacerlo manualmente en el momento de la carga de la página
+        var moonIcon = darkModeToggle.querySelector('.bi-moon-fill');
+        var sunIcon = darkModeToggle.querySelector('.bi-sun-fill');
+        moonIcon.classList.remove('d-none'); // Muestra el ícono de la luna
+        sunIcon.classList.add('d-none'); // Oculta el ícono del sol
+    }
+});
 
 
 // Graficos

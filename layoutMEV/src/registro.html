@@ -30,6 +30,10 @@
                             </div>
                         </div>
                         <div class="campana">
+                            <a href="#" id="dark-mode-toggle" class="text-decoration-none">
+                                <i class="bi bi-moon-fill"></i> <!-- Icono para el modo oscuro -->
+                                <i class="bi bi-sun-fill d-none"></i> <!-- Icono para el modo claro (inicialmente oculto) -->
+                            </a>                            
                             <a href="registro.html"><i class="bi bi-person"></i></a>
                             <i class="bi bi-cart"></i>
                             <i class="bi bi-bell"></i>
@@ -51,7 +55,8 @@
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre: </label>
                             <input type="text" class="form-control" id="nombre" name="nombre" data-bs-toggle="tooltip"
-                                data-bs-placement="top" title="Máximo 20 caracteres" maxlength="20" tabindex="1" required>
+                                data-bs-placement="top" title="Máximo 20 caracteres" maxlength="20" tabindex="1"
+                                required>
 
                         </div>
                         <div class="mb-3">
@@ -69,12 +74,14 @@
                             <input type="tel" class="form-control" id="password" data-bs-toggle="tooltip"
                                 data-bs-placement="top" title="Al menos 8 caracteres: 1 mayúscula, 1 minúscula,
                         1 número y 1 símbolo" name="password"
-                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" tabindex="4" required>
+                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                                tabindex="4" required>
                         </div>
                         <!-- Dropdown para seleccionar la comunidad autónoma -->
                         <div class="mb-3">
                             <label for="comunidad-autonoma" class="form-label">Comunidad Autónoma:</label>
-                            <select class="form-select" id="comunidad-autonoma" name="comunidad-autonoma" tabindex="5" required>
+                            <select class="form-select" id="comunidad-autonoma" name="comunidad-autonoma" tabindex="5"
+                                required>
                                 <option value="" selected disabled>Selecciona una comunidad autónoma</option>
                                 <option value="andalucia">Andalucía</option>
                                 <option value="aragon">Aragón</option>
@@ -91,8 +98,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento:</label>
-                            <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento" tabindex="7"
-                                required>
+                            <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento"
+                                tabindex="7" required>
                         </div>
                         <div class="mb-3">
                             <label for="pagina-web" class="form-label">URL de Página Web:</label>
@@ -107,6 +114,30 @@
                                 data-bs-target="#confirmacionModal" tabindex="10">Cancelar</button>
                         </div>
                     </form>
+
+                    <!-- Modal de Confirmación -->
+                    <div class="modal fade" id="confirmacionModal" tabindex="-1"
+                        aria-labelledby="confirmacionModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="confirmacionModalLabel">Confirmar Cancelación</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    ¿Estás seguro de que deseas cancelar el registro? Se perderán los datos ingresados.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                        id="confirmarCancelacionButton">Confirmar Cancelación</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <footer class="row">
                     <section class="informacion-tienda">
@@ -142,27 +173,6 @@
         </div>
     </div>
 
-
-    <!-- Modal de Confirmación -->
-    <div class="modal fade" id="confirmacionModal" tabindex="-1" aria-labelledby="confirmacionModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="confirmacionModalLabel">Confirmar Cancelación</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    ¿Estás seguro de que deseas cancelar el registro? Se perderán los datos ingresados.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                        id="confirmarCancelacionButton">Confirmar Cancelación</button>
-                </div>
-            </div>
-        </div>
-    </div>
 </body>
 
 </html>
