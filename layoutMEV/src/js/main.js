@@ -52,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+
 // Graficos
 // Datos y configuración del gráfico de línea
 const data = {
