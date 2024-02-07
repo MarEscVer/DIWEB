@@ -50,35 +50,35 @@ body {
   }
 
   // Video
-  .modal {
+  #videoModal {
     background: $base-color;
     overflow: hidden;
     padding: 0;
-  }
 
-  .modal-dialog {
-    max-width: none;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .modal-dialog {
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  .modal-content {
-    border: none;
-    box-shadow: none;
-  }
+    .modal-content {
+      border: none;
+      box-shadow: none;
+    }
 
-  .modal-header {
-    border-bottom: none;
-  }
+    .modal-header {
+      border-bottom: none;
+    }
 
-  #myVideoModal {
-    width: 100%;
-    height: auto;
-    max-height: 88vh;
+    #myVideoModal {
+      width: 100%;
+      height: auto;
+      max-height: 88vh;
+    }
   }
 
 }

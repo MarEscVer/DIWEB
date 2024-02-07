@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Graficos
 // Datos y configuración del gráfico de línea
 const data = {
     labels: ['ENE', 'FEB', 'MAR', 'ABR', 'MAY', 'JUN', 'JUL', 'AGO', 'SEP', 'OCT', 'NOV', 'DIC'],

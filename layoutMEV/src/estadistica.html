@@ -22,11 +22,11 @@
                         </a>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link active" aria-current="page" href="index.html"><i
+                                <a class="nav-link" aria-current="page" href="index.html"><i
                                         class="bi bi-house"></i><br>Inicio</a>
                                 <a class="nav-link" href="#"><i class="bi bi-book"></i><br>Catálogo</a>
                                 <a class="nav-link" href="#"><i class="bi bi-people"></i><br>Quines somos</a>
-                                <a class="nav-link" href="estadistica.html"><i
+                                <a class="nav-link active" href="estadistica.html"><i
                                         class="bi bi-bar-chart-line"></i><br>Estadística</a>
                             </div>
                         </div>
@@ -77,66 +77,34 @@
                         </div>
 
                         <!-- Contenedor para el Pie Chart -->
-                        <div class="col-md-5 mb-4">
+                        <div class="col-md-4 mb-4">
                             <div class="card border-rounded p-4 bg-success shadow-sm">
                                 <!-- Texto del Pie Chart -->
                                 <p class="text-center">VENTA POR CATEGORÍA</p>
                                 <p class="text-left">Total de Ventas: <span id="totalVentasPieChart">0</span></p>
                                 <!-- Gráfico de Pie Chart -->
-                                <div class="text-center bg-white">
+                                <div class="text-center p-4 bg-white">
                                     <canvas id="pieChart" class="border rounded"></canvas>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Contenedor para el Doughnut Chart -->
-                        <div class="col-md-5 mb-4">
+                        <div class="col-md-4 mb-4">
                             <div class="card border-rounded p-4 bg-warning shadow-sm">
                                 <!-- Texto del Doughnut Chart -->
                                 <p class="text-center">ACTIVIDAD MENSUAL</p>
                                 <p class="text-left">Total de Usuarios: <span id="totalUsuariosDoughnutChart">0</span>
                                 </p>
                                 <!-- Gráfico de Doughnut Chart -->
-                                <div class="text-center bg-white">
+                                <div class="text-center p-4 bg-white">
                                     <canvas id="doughnutChart" class="border rounded"></canvas>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Contenedor para la primera tabla -->
-                        <div class="col-md-5 mb-4">
-                            <div class="card border-rounded p-4 bg-info shadow-sm">
-                                <!-- Texto de la segunda tabla -->
-                                <p class="text-center mb-2">DATOS GENERALES</p>
-                                <!-- Contenido de la primera tabla -->
-                                <div class="table-responsive">
-                                    <table class="table text-center">
-                                        <tbody>
-                                            <tr>
-                                                <td>Nuevas ventas</td>
-                                                <td>10</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Beneficio mensual</td>
-                                                <td>50€</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Nuevos clientes</td>
-                                                <td>5</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Nuevas reseñas</td>
-                                                <td>4</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-
                         <!-- Contenedor para la segunda tabla -->
-                        <div class="col-md-5 mb-4">
+                        <div class="col-md-4 mb-4">
                             <div class="card border-rounded p-4 bg-danger shadow-sm">
                                 <!-- Texto de la segunda tabla -->
                                 <p class="text-center mb-2">HISTORIAL DE VENTAS</p>
@@ -166,6 +134,11 @@
                                                 <td>01/01/2023</td>
                                                 <td><a href="#"><i class="bi bi-info-circle"></i></a></td>
                                             </tr>
+                                            <tr>
+                                                <td>#123456</td>
+                                                <td>01/01/2023</td>
+                                                <td><a href="#"><i class="bi bi-info-circle"></i></a></td>
+                                            </tr> 
                                             <tr>
                                                 <td>#123456</td>
                                                 <td>01/01/2023</td>
