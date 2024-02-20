@@ -9,10 +9,11 @@ import Chart from 'chart.js/auto';
 document.addEventListener('DOMContentLoaded', function () {
     // Verifica si ya se ha mostrado el modal en esta sesión
     var isModalShown = sessionStorage.getItem('isModalShown');
+    var videoModal = document.getElementById('videoModal');
 
     if (!isModalShown) {
         // Muestra el modal automáticamente al cargar la página
-        var myModal = new bootstrap.Modal(document.getElementById('videoModal'), {});
+        var myModal = new bootstrap.Modal(videoModal);
         myModal.show();
 
         // Marca que el modal ha sido mostrado en esta sesión

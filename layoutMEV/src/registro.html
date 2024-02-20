@@ -10,169 +10,170 @@
 <body>
     <div class="contenido">
         <div class="container-fluid">
-            <div id="registro">
+            <div id="registro" role="main">
                 <!-- Navbar -->
                 <nav class="row navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="index.html" aria-label="Ir a la página de inicio">
                             <img src="./img/POMPASNCONTORNO.svg" alt="BLOOM tienda de jabones naturales" width="40"
                                 class="d-inline-block align-text-top">
                             <div>BLOOM</div>
                         </a>
                         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                             <div class="navbar-nav">
-                                <a class="nav-link" aria-current="page" href="index.html"><i
+                                <a class="nav-link" aria-current="page" href="index.html" aria-label="Ir a la página de inicio"><i
                                         class="bi bi-house"></i><br>Inicio</a>
-                                <a class="nav-link" href="registro.html"><i class="bi bi-book"></i><br>Catálogo</a>
-                                <a class="nav-link" href="#"><i class="bi bi-people"></i><br>Quines somos</a>
-                                <a class="nav-link" href="estadistica.html"><i
+                                <a class="nav-link" href="registro.html" aria-label="Ir al catálogo"><i class="bi bi-book"></i><br>Catálogo</a>
+                                <a class="nav-link" href="#" aria-label="Sobre nosotros"><i class="bi bi-people"></i><br>Quiénes somos</a>
+                                <a class="nav-link" href="estadistica.html" aria-label="Ver estadísticas"><i
                                         class="bi bi-bar-chart-line"></i><br>Estadística</a>
                             </div>
                         </div>
                         <div class="campana">
-                            <a href="#" id="dark-mode-toggle" class="text-decoration-none">
+                            <a href="#" id="dark-mode-toggle" class="text-decoration-none" aria-label="Cambiar modo">
                                 <i class="bi bi-moon-fill"></i> <!-- Icono para el modo oscuro -->
                                 <i class="bi bi-sun-fill d-none"></i> <!-- Icono para el modo claro (inicialmente oculto) -->
                             </a>                            
-                            <a href="registro.html"><i class="bi bi-person"></i></a>
-                            <i class="bi bi-cart"></i>
-                            <i class="bi bi-bell"></i>
+                            <a href="registro.html" aria-label="Acceder al registro"><i class="bi bi-person"></i></a>
+                            <i class="bi bi-cart" aria-label="Carrito de compras"></i>
+                            <i class="bi bi-bell" aria-label="Notificaciones"></i>
                         </div>
                     </div>
                 </nav>
 
                 <!-- Migas de Pan -->
-                <div class="row">
+                <div class="row" role="navigation" aria-label="Migas de Pan">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="./index.html">Inicio</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Registro</li>
                         </ol>
                     </nav>
+                </div>
 
-                    <form id="registroForm" action="#" method="post" class="mt-4 mb-4">
-                        <!--Todos los input serán requeridos para que a nivel de estilos siempre aparecerá el estilo input:valid en aquellos campos que no estén requeridos-->
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre: </label>
-                            <input type="text" class="form-control" id="nombre" name="nombre" data-bs-toggle="tooltip"
-                                data-bs-placement="top" title="Máximo 20 caracteres" maxlength="20" tabindex="1"
-                                required>
+                <form id="registroForm" action="#" method="post" class="mt-4 mb-4">
+                    <!--Todos los input serán requeridos para que a nivel de estilos siempre aparecerá el estilo input:valid en aquellos campos que no estén requeridos-->
+                    <div class="mb-3" role="group">
+                        <label for="nombre" class="form-label">Nombre: </label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="Máximo 20 caracteres" maxlength="20"
+                            required aria-required="true">
 
-                        </div>
-                        <div class="mb-3">
-                            <label for="apellidos" class="form-label">Apellidos: </label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos"
-                                data-bs-toggle="tooltip" data-bs-placement="top" title="Máximo 40 caracteres"
-                                maxlength="40" tabindex="2" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" class="form-control" id="email" name="email" tabindex="3" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Contraseña:</label>
-                            <input type="tel" class="form-control" id="password" data-bs-toggle="tooltip"
-                                data-bs-placement="top" title="Al menos 8 caracteres: 1 mayúscula, 1 minúscula,
-                        1 número y 1 símbolo" name="password"
-                                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
-                                tabindex="4" required>
-                        </div>
-                        <!-- Dropdown para seleccionar la comunidad autónoma -->
-                        <div class="mb-3">
-                            <label for="comunidad-autonoma" class="form-label">Comunidad Autónoma:</label>
-                            <select class="form-select" id="comunidad-autonoma" name="comunidad-autonoma" tabindex="5"
-                                required>
-                                <option value="" selected disabled>Selecciona una comunidad autónoma</option>
-                                <option value="andalucia">Andalucía</option>
-                                <option value="aragon">Aragón</option>
-                                <option value="asturias">Asturias</option>
-                                <option value="galicia">Galicia</option>
-                                <option value="madrid">Madrid</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="telefono" class="form-label">Número de Teléfono:</label>
-                            <input type="tel" class="form-control" id="telefono" name="telefono"
-                                pattern="^\+\d{2}-\d{4}-\d{5}$" data-bs-toggle="tooltip" data-bs-placement="top"
-                                title="Formato: +XX-XXXX-XXXXX" tabindex="6" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento:</label>
-                            <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento"
-                                tabindex="7" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="pagina-web" class="form-label">URL de Página Web:</label>
-                            <input type="url" class="form-control" id="pagina-web" name="pagina-web"
-                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                title="https://www.nombre-apellidos.com" pattern="https?://.+" tabindex="8" required>
-                        </div>
-                        <!-- Botones de Bootstrap -->
-                        <div class="d-flex justify-content-between mt-4">
-                            <button type="submit" class="btn btn-primary" tabindex="9">Enviar</button>
-                            <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
-                                data-bs-target="#confirmacionModal" tabindex="10">Cancelar</button>
-                        </div>
-                    </form>
+                    </div>
+                    <div class="mb-3" role="group">
+                        <label for="apellidos" class="form-label">Apellidos: </label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos"
+                            data-bs-toggle="tooltip" data-bs-placement="top" title="Máximo 40 caracteres"
+                            maxlength="40" required aria-required="true">
+                    </div>
+                    <div class="mb-3" role="group">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required
+                            aria-required="true">
+                    </div>
+                    <div class="mb-3" role="group">
+                        <label for="password" class="form-label">Contraseña:</label>
+                        <input type="tel" class="form-control" id="password" data-bs-toggle="tooltip"
+                            data-bs-placement="top" title="Al menos 8 caracteres: 1 mayúscula, 1 minúscula,
+                    1 número y 1 símbolo" name="password"
+                            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                            required aria-required="true">
+                    </div>
+                    <!-- Dropdown para seleccionar la comunidad autónoma -->
+                    <div class="mb-3" role="group">
+                        <label for="comunidad-autonoma" class="form-label">Comunidad Autónoma:</label>
+                        <select class="form-select" id="comunidad-autonoma" name="comunidad-autonoma" 
+                            required aria-required="true">
+                            <option value="" selected disabled>Selecciona una comunidad autónoma</option>
+                            <option value="andalucia">Andalucía</option>
+                            <option value="aragon">Aragón</option>
+                            <option value="asturias">Asturias</option>
+                            <option value="galicia">Galicia</option>
+                            <option value="madrid">Madrid</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" role="group">
+                        <label for="telefono" class="form-label">Número de Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono"
+                            pattern="^\+\d{2}-\d{4}-\d{5}$" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Formato: +XX-XXXX-XXXXX" required aria-required="true">
+                    </div>
+                    <div class="mb-3" role="group">
+                        <label for="fecha-nacimiento" class="form-label">Fecha de Nacimiento:</label>
+                        <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento"
+                            required aria-required="true">
+                    </div>
+                    <div class="mb-3" role="group">
+                        <label for="pagina-web" class="form-label">URL de Página Web:</label>
+                        <input type="url" class="form-control" id="pagina-web" name="pagina-web"
+                            data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="https://www.nombre-apellidos.com" pattern="https?://.+" required
+                            aria-required="true">
+                    </div>
+                    <!-- Botones de Bootstrap -->
+                    <div class="d-flex justify-content-between mt-4">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal"
+                            data-bs-target="#confirmacionModal">Cancelar</button>
+                    </div>
+                </form>
 
-                    <!-- Modal de Confirmación -->
-                    <div class="modal fade" id="confirmacionModal" tabindex="-1"
-                        aria-labelledby="confirmacionModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="confirmacionModalLabel">Confirmar Cancelación</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    ¿Estás seguro de que deseas cancelar el registro? Se perderán los datos ingresados.
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary"
-                                        data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                        id="confirmarCancelacionButton">Confirmar Cancelación</button>
-                                </div>
+                <!-- Modal de Confirmación -->
+                <div class="modal fade" id="confirmacionModal"
+                    aria-labelledby="confirmacionModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="confirmacionModalLabel">Confirmar Cancelación</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="cerrar"></button>
+                            </div>
+                            <div class="modal-body">
+                                ¿Estás seguro de que deseas cancelar el registro? Se perderán los datos ingresados.
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    id="confirmarCancelacionButton">Confirmar Cancelación</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <footer class="row">
-                    <section class="informacion-tienda">
-                        <h3>TIENDA</h3>
-                        <ul>
-                            <li><a href="#">Nuestro compromiso</a></li>
-                            <li><a href="#">Nuestras políticas</a></li>
-                            <li><a href="#">Contáctanos</a></li>
-                            <li><a href="#">Cambios y devoluciones</a></li>
-                            <li><a href="#">Aviso legal</a></li>
-                        </ul>
 
-                    </section>
-                    <div class="redes-sociales">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                    </div>
-                    <section class="links-interes">
-                        <h3>Links de Interés</h3>
-                        <ul>
-                            <li><a href="#">Términos y Condiciones</a></li>
-                            <li><a href="#">Política de Privacidad</a></li>
-                            <li><a href="https://pixabay.com/es/service/license-summary/">
-                                    <i class="bi bi-cc-circle-fill"></i>
-                                    Términos de contenido multimedia
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                </footer>
             </div>
         </div>
     </div>
 
+    <footer class="row">
+        <section class="informacion-tienda">
+            <h3>TIENDA</h3>
+            <ul>
+                <li><a href="#" aria-label="Leer nuestro compromiso">Nuestro compromiso</a></li>
+                <li><a href="#" aria-label="Ver nuestras políticas">Nuestras políticas</a></li>
+                <li><a href="#" aria-label="Contáctanos">Contáctanos</a></li>
+                <li><a href="#" aria-label="Información sobre cambios y devoluciones">Cambios y devoluciones</a></li>
+                <li><a href="#" aria-label="Leer nuestro aviso legal">Aviso legal</a></li>
+            </ul>
+
+        </section>
+        <div class="redes-sociales">
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        </div>
+        <section class="links-interes">
+            <h3>Links de Interés</h3>
+            <ul>
+                <li><a href="#" aria-label="Leer nuestros términos y condiciones">Términos y Condiciones</a></li>
+                <li><a href="#" aria-label="Leer nuestra política de privacidad">Política de Privacidad</a></li>
+                <li><a href="https://pixabay.com/es/service/license-summary/"
+                        aria-label="Ver los términos de contenido multimedia"><i class="bi bi-cc-circle-fill"></i>
+                        Términos de contenido multimedia</a>
+                </li>
+            </ul>
+        </section>
+    </footer>
 </body>
 
 </html>
